@@ -19,7 +19,7 @@ from transformers import (
 
 from src.utils import utils
 from src.models.codelstm import CodeLSTMEncoder
-from src.models.contracode import CodeTransformerEncoder
+#from src.models.contracode import CodeTransformerEncoder
 from src.models.monkeypatch import RobertaModel, RobertaForMaskedLM
 from src.models.context import ContextEncoder, AttentionEncoder
 from src.models.relation import RelationNetwork

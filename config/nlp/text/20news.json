@@ -1,5 +1,5 @@
 {
-    "exp_base": null,
+    "exp_base": "experiments",
     "exp_name": "20news_5shot_proto_transformer",
     "agent": "NLPPrototypeNetAgent",
     "cuda": true,
@@ -8,7 +8,7 @@
     "data_loader_workers": 4,
     "dataset": {
         "name": "fs_20news",
-        "data_root": null,
+        "data_root": "data/20news.json",
         "train": {
             "n_ways": 5,
             "n_shots": 5,
@@ -41,6 +41,6 @@
     "validate": true,
     "validate_freq": 1,
     "copy_checkpoint_freq": 10,
-    "continue_exp_dir": null,
+    "continue_exp_dir": "experiments/20news_5shot_experiment",
     "continue_exp_name": null
 }

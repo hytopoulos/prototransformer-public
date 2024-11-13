@@ -1,14 +1,14 @@
 import numpy as np
 import torch
 from torch.utils.data import DataLoader
-
+import logging
 from src.utils import utils
 
 
 class BaseAgent(object):
     def __init__(self, config):
         self.config = config
-        # self.logger = logging.getLogger("Agent")
+        self.logger = logging.getLogger("Agent")
 
         self._set_seed()  # set seed as early as possible
 

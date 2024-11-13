@@ -17,7 +17,8 @@ def run(args, gpu_device=0):
     if config.continue_exp_dir is not None:
         agent.logger.info("Found existing model... Continuing training!")
         checkpoint_dir = os.path.join(config.continue_exp_dir, 'checkpoints')
-        agent.load_checkpoint(config.continue_exp_name, checkpoint_dir=checkpoint_dir, 
+        if config.continue_exp_name is not None:
+            agent.load_checkpoint(config.continue_exp_name, checkpoint_dir=checkpoint_dir, 
                               load_model=True, load_optim=True, load_epoch=True)
 
     try:
